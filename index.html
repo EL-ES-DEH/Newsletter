@@ -122,14 +122,29 @@
     <div class="video">
       <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=EL-ES-DEH" allowfullscreen></iframe>
       <p><a href="https://www.youtube.com/@EL-ES-DEH" target="_blank">Zur Kanalübersicht auf YouTube</a></p>
+
+      <!-- YouTube Subscribe Button -->
+      <div style="text-align: center; margin-top: 2em;">
+        <div class="g-ytsubscribe"
+             data-channel="@EL-ES-DEH"
+             data-layout="default"
+             data-count="default">
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script>
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('open');
     }
+
+    if (window.innerWidth <= 768) {
+      document.getElementById('sidebar').classList.add('closed');
+    }
   </script>
+  <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 </html>
