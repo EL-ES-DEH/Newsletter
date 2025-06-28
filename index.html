@@ -32,6 +32,45 @@
     }
     a {
       color: #d4af37;
+ }
+    #sidebarToggle {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      font-size: 1.8em;
+      cursor: pointer;
+      z-index: 1001;
+      color: var(--accent-color);
+      background-color: transparent;
+      border: none;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 180px;
+      height: 100%;
+      background-color: #121212;
+      padding-top: 3em;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+      transition: left 0.4s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar a {
+      padding: 1em;
+      text-decoration: none;
+      color: var(--accent-color);
+      font-family: 'UnifrakturCook', serif;
+      border-bottom: 1px solid #333;
+      transition: background-color 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #1e1e1e;
+    }
+    .sidebar.open {
+      left: 0;
     }
   </style>
 </head>
