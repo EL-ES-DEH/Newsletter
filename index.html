@@ -36,29 +36,46 @@
       font-style: italic;
     }
 
-    .video {
-      margin: 2em 0;
+    .video-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .video-card {
+      background-color: #222;
+      border: 1px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
       text-align: center;
+      padding: 1em;
+    }
+
+    .video-card img {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .video-card-title {
+      font-family: 'UnifrakturCook', serif;
+      font-size: 1.4em;
+      margin-top: 0.5em;
+      color: var(--accent-color);
     }
 
     .subscribe-area {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
+      gap: 1em;
       margin-top: 2em;
     }
 
     .subscribe-counter {
-      text-align: right;
-      flex: 1 1 auto;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      border: none;
+      align-self: flex-end;
     }
 
     a {
@@ -135,7 +152,6 @@
     }
 
     .subscribe-button {
-      margin-top: 1em;
       background: linear-gradient(45deg, #d4af37, #f6e27a);
       color: #000;
       border: none;
@@ -180,20 +196,34 @@
       Hier werden stets alle Videos aus meinem Hause, unabhängig von externen Faktoren, angezeigt. Zwar hoffe ich, dass der Tag noch fern ist, jedoch muss auch ich mir der Tatsache bewusst sein, wie wackelig so manch ein Profil angesichts plattformgebundener Restriktionen aufgestellt sein kann. Wer mich also von der Bildfläche verschwunden wähnt, der wird mich an diesem Zufluchtsort antreffen.
     </div>
 
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/videoseries?list=UUJS7rVmSlLLmoT5JdrFrdbQ" allowfullscreen></iframe>
+    <div class="video-list">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg" alt="Video Titel 1">
+        </a>
+        <div class="video-card-title">Video Titel 1</div>
+      </div>
 
-      <div class="subscribe-area">
-        <button onclick="confirmSubscription()" class="subscribe-button">
-          Abonnement abschließen
-        </button>
+      <!-- Video 2 -->
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="Video Titel 2">
+        </a>
+        <div class="video-card-title">Video Titel 2</div>
+      </div>
+    </div>
 
-        <div class="subscribe-counter">
-          <div class="g-ytsubscribe" 
-               data-channelid="UCJS7rVmSlLLmoT5JdrFrdbQ" 
-               data-layout="default" 
-               data-count="default">
-          </div>
+    <div class="subscribe-area">
+      <button onclick="confirmSubscription()" class="subscribe-button">
+        Abonnement abschließen
+      </button>
+
+      <div class="subscribe-counter">
+        <div class="g-ytsubscribe" 
+             data-channelid="UCJS7rVmSlLLmoT5JdrFrdbQ" 
+             data-layout="default" 
+             data-count="default">
         </div>
       </div>
 
