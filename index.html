@@ -157,9 +157,12 @@
         <div class="g-ytsubscribe" 
              data-channelid="UCJS7rVmSlLLmoT5JdrFrdbQ" 
              data-layout="default" 
-             data-count="default"
-             onclick="showThankYou()">
+             data-count="default">
         </div>
+        <br>
+        <button onclick="confirmSubscription()" style="margin-top: 1em; background-color: var(--accent-color); color: #000; border: none; padding: 0.5em 1em; cursor: pointer;">
+          Jetzt abonnieren
+        </button>
       </div>
 
       <div id="thankYou" class="thank-you">Vielen Dank, Abonnent!</div>
@@ -174,6 +177,11 @@
 
     if (window.innerWidth <= 768) {
       document.getElementById('sidebar').classList.add('closed');
+    }
+
+    function confirmSubscription() {
+      window.open("https://www.youtube.com/channel/UCJS7rVmSlLLmoT5JdrFrdbQ?sub_confirmation=1", "_blank");
+      showThankYou();
     }
 
     function showThankYou() {
