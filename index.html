@@ -110,12 +110,31 @@
       color: var(--accent-color);
       border-radius: 5px;
       animation: fadeout 3s ease-out 1 forwards;
+      position: fixed;
+      top: 1em;
+      right: 1em;
+      z-index: 9999;
     }
 
     @keyframes fadeout {
       0% { opacity: 1; }
       80% { opacity: 1; }
       100% { opacity: 0; display: none; }
+    }
+
+    .subscribe-button {
+      margin-top: 1em;
+      background: linear-gradient(45deg, #d4af37, #f6e27a);
+      color: #000;
+      border: none;
+      padding: 0.6em 1.2em;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .subscribe-button:hover {
+      opacity: 0.85;
     }
 
     @media screen and (max-width: 768px) {
@@ -151,7 +170,6 @@
 
     <div class="video">
       <iframe src="https://www.youtube.com/embed/videoseries?list=UUJS7rVmSlLLmoT5JdrFrdbQ" allowfullscreen></iframe>
-      <p><a href="https://www.youtube.com/channel/UCJS7rVmSlLLmoT5JdrFrdbQ" target="_blank">Zur Kanalübersicht auf YouTube</a></p>
 
       <div style="text-align: center; margin-top: 2em;">
         <div class="g-ytsubscribe" 
@@ -160,12 +178,12 @@
              data-count="default">
         </div>
         <br>
-        <button onclick="confirmSubscription()" style="margin-top: 1em; background-color: var(--accent-color); color: #000; border: none; padding: 0.5em 1em; cursor: pointer;">
-          Jetzt abonnieren
+        <button onclick="confirmSubscription()" class="subscribe-button">
+          Abonnement abschließen
         </button>
       </div>
 
-      <div id="thankYou" class="thank-you">Vielen Dank, Abonnent!</div>
+      <div id="thankYou" class="thank-you">Los, tu' es!</div>
     </div>
   </div>
 
