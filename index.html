@@ -5,34 +5,45 @@
   <title>Portables Lebenswerk</title>
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #181818;
+      --text-color: #f1f1f1;
+      --accent-color: #d4af37;
+    }
+
     body {
-      background-color: #181818;
-      color: #f1f1f1;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-family: Georgia, serif;
       margin: 4em auto;
       max-width: 800px;
       padding: 0 1.5em;
       line-height: 1.6;
     }
+
     h1 {
       font-family: 'UnifrakturCook', serif;
       font-size: 3em;
       text-align: center;
-      color: #d4af37;
+      color: var(--accent-color);
     }
+
     .video {
       margin: 2em 0;
       text-align: center;
     }
+
     iframe {
       width: 100%;
       max-width: 560px;
       height: 315px;
       border: none;
     }
+
     a {
-      color: #d4af37;
- }
+      color: var(--accent-color);
+    }
+
     #sidebarToggle {
       position: fixed;
       top: 1em;
@@ -44,20 +55,22 @@
       background-color: transparent;
       border: none;
     }
+
     .sidebar {
       position: fixed;
       top: 0;
-      left: -200px;
+      left: 0;
       width: 180px;
       height: 100%;
       background-color: #121212;
       padding-top: 3em;
       box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-      transition: left 0.4s ease;
       z-index: 1000;
       display: flex;
       flex-direction: column;
+      transition: left 0.4s ease;
     }
+
     .sidebar a {
       padding: 1em;
       text-decoration: none;
@@ -66,21 +79,62 @@
       border-bottom: 1px solid #333;
       transition: background-color 0.2s;
     }
+
     .sidebar a:hover {
       background-color: #1e1e1e;
     }
-    .sidebar.open {
-      left: 0;
+
+    .sidebar.closed {
+      left: -200px;
+    }
+
+    .main-content {
+      margin-left: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        left: -200px;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Portables Lebenswerk</h1>
+  <button id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=EL-ES-DEH" allowfullscreen></iframe>
-    <p><a href="https://www.youtube.com/@EL-ES-DEH" target="_blank">Zur Kanalübersicht auf YouTube</a></p>
+  <div id="sidebar" class="sidebar">
+    <a href="https://el-es-deh.github.io/Blog/">Blog</a>
+    <a href="https://el-es-deh.github.io/Newsletter/">Newsletter</a>
+    <a href="https://el-es-deh.github.io/Impressum/">Impressum</a>
   </div>
 
+  <div class="main-content">
+    <h1>Portables Lebenswerk</h1>
+
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=EL-ES-DEH" allowfullscreen></iframe>
+      <p><a href="https://www.youtube.com/@EL-ES-DEH" target="_blank">Zur Kanalübersicht auf YouTube</a></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+    }
+
+    // Sidebar auf Mobilgeräten geschlossen starten
+    if (window.innerWidth <= 768) {
+      document.getElementById('sidebar').classList.add('closed');
+    }
+  </script>
 </body>
 </html>
