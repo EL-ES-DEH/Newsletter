@@ -28,6 +28,14 @@
       color: var(--accent-color);
     }
 
+    .intro-text {
+      background-color: #222;
+      border-left: 4px solid var(--accent-color);
+      padding: 1em;
+      margin-bottom: 2em;
+      font-style: italic;
+    }
+
     .video {
       margin: 2em 0;
       text-align: center;
@@ -92,6 +100,24 @@
       margin-left: 200px;
     }
 
+    .thank-you {
+      display: none;
+      background-color: #2c2c2c;
+      border: 1px solid var(--accent-color);
+      padding: 1em;
+      margin-top: 1em;
+      text-align: center;
+      color: var(--accent-color);
+      border-radius: 5px;
+      animation: fadeout 3s ease-out 1 forwards;
+    }
+
+    @keyframes fadeout {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; display: none; }
+    }
+
     @media screen and (max-width: 768px) {
       .sidebar {
         left: -200px;
@@ -119,11 +145,27 @@
   <div class="main-content">
     <h1>Portables Lebenswerk</h1>
 
+    <div class="intro-text">
+      Hier werden stets alle Videos aus meinem Hause, unabhängig von externen Faktoren, angezeigt. Zwar hoffe ich, dass der Tag noch fern ist, jedoch muss auch ich mir der Tatsache bewusst sein, wie wackelig so manch ein Profil angesichts plattformgebundener Restriktionen aufgestellt sein kann. Wer mich also von der Bildfläche verschwunden wähnt, der wird mich an diesem Zufluchtsort antreffen.
+    </div>
+
     <div class="video">
-      <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=EL-ES-DEH" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=UUJS7rVmSlLLmoT5JdrFrdbQ" allowfullscreen></iframe>
       <p><a href="https://www.youtube.com/channel/UCJS7rVmSlLLmoT5JdrFrdbQ" target="_blank">Zur Kanalübersicht auf YouTube</a></p>
 
-  <!-- Scripts -->
+      <div style="text-align: center; margin-top: 2em;">
+        <div class="g-ytsubscribe" 
+             data-channelid="UCJS7rVmSlLLmoT5JdrFrdbQ" 
+             data-layout="default" 
+             data-count="default"
+             onclick="showThankYou()">
+        </div>
+      </div>
+
+      <div id="thankYou" class="thank-you">Vielen Dank, Abonnent!</div>
+    </div>
+  </div>
+
   <script>
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
@@ -133,7 +175,16 @@
     if (window.innerWidth <= 768) {
       document.getElementById('sidebar').classList.add('closed');
     }
+
+    function showThankYou() {
+      const msg = document.getElementById('thankYou');
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 4000);
+    }
   </script>
+
   <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 </html>
