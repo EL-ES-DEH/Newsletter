@@ -55,6 +55,9 @@
     .video-card img {
       width: 100%;
       max-width: 560px;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -76,6 +79,7 @@
 
     .subscribe-counter {
       align-self: flex-end;
+      margin-right: 0;
     }
 
     a {
@@ -197,19 +201,14 @@
     </div>
 
     <div class="video-list">
-      <!-- Video 1 -->
       <div class="video-card">
-        <a href="https://youtu.be/JLveNDNFh0w" target="_blank">
-          <img src="https://img.youtube.com/vi/JLveNDNFh0w/hqdefault.jpg" alt="19,70 €">
+        <a href="https://youtu.be/JLveNDNFh0w" target="19,70 €">
+          <img src="https://img.youtube.com/vi/JLveNDNFh0w/maxresdefault.jpg" alt="Video Titel 1">
         </a>
         <div class="video-card-title">19,70 €</div>
       </div>
-
+      
     <div class="subscribe-area">
-      <button onclick="confirmSubscription()" class="subscribe-button">
-        Abonnement abschließen
-      </button>
-
       <div class="subscribe-counter">
         <div class="g-ytsubscribe" 
              data-channelid="UCJS7rVmSlLLmoT5JdrFrdbQ" 
@@ -217,6 +216,10 @@
              data-count="default">
         </div>
       </div>
+
+      <button onclick="confirmSubscription()" class="subscribe-button">
+        Abonnement abschließen
+      </button>
 
       <div id="thankYou" class="thank-you">Los, tu' es!</div>
     </div>
