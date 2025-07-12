@@ -14,7 +14,7 @@
       --card-bg: #121212;
       --card-border: #333333;
       --overlay: rgba(0, 0, 0, 0.7);
-      --max-content-width: 680px; /* Reduced from 800px */
+      --max-content-width: 680px;
     }
     
     * {
@@ -27,7 +27,7 @@
       color: var(--text-color);
       font-family: Georgia, serif;
       margin: 0;
-      padding: 3em 1.5em 2em; /* Slightly reduced padding */
+      padding: 3em 1.5em 2em;
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -61,7 +61,7 @@
     
     h1 {
       font-family: 'UnifrakturCook', serif;
-      font-size: 2.8em; /* Slightly smaller */
+      font-size: 2.8em;
       text-align: center;
       color: var(--accent-color);
       margin-bottom: 0.5em;
@@ -70,12 +70,12 @@
     
     .intro-text {
       background-color: var(--card-bg);
-      border-left: 3px solid var(--accent-color); /* Thinner border */
-      padding: 1.2em; /* Adjusted padding */
+      border-left: 3px solid var(--accent-color);
+      padding: 1.2em;
       margin: 0 auto 2em auto;
       font-style: italic;
       border-radius: 0 6px 6px 0;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Softer shadow */
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       max-width: var(--max-content-width);
       line-height: 1.7;
     }
@@ -83,7 +83,7 @@
     .video-list {
       display: flex;
       flex-direction: column;
-      gap: 1.5em; /* Reduced gap */
+      gap: 1.5em;
       margin: 2em auto 0 auto;
       max-width: var(--max-content-width);
     }
@@ -91,17 +91,17 @@
     .video-card {
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 8px; /* Slightly smaller radius */
+      border-radius: 8px;
       overflow: hidden;
       text-align: center;
-      padding: 1.2em; /* Reduced padding */
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Softer shadow */
+      padding: 1.2em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .video-card:hover {
-      transform: translateY(-3px); /* Smaller hover lift */
-      box-shadow: 0 4px 8px rgba(212, 175, 55, 0.15); /* More subtle hover effect */
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 175, 55, 0.15);
     }
     
     .video-card img {
@@ -110,15 +110,15 @@
       height: auto;
       aspect-ratio: 16/9;
       object-fit: cover;
-      border-radius: 4px; /* Smaller radius */
+      border-radius: 4px;
       cursor: pointer;
       border: 1px solid #444;
     }
     
     .video-card-title {
       font-family: 'UnifrakturCook', serif;
-      font-size: 1.3em; /* Slightly smaller */
-      margin-top: 0.8em; /* Adjusted spacing */
+      font-size: 1.3em;
+      margin-top: 0.8em;
       color: var(--accent-color);
       letter-spacing: 0.03em;
     }
@@ -127,10 +127,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.2em; /* Reduced gap */
+      gap: 1.2em;
       margin: 3em auto 0 auto;
       max-width: var(--max-content-width);
-      padding: 1.5em; /* Reduced padding */
+      padding: 1.5em;
       background-color: var(--card-bg);
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -150,7 +150,7 @@
       position: fixed;
       top: 1em;
       left: 1em;
-      font-size: 1.6em; /* Slightly smaller */
+      font-size: 1.6em;
       cursor: pointer;
       z-index: 1001;
       color: var(--accent-color);
@@ -170,11 +170,11 @@
     .sidebar {
       position: fixed;
       top: 0;
-      left: -220px; /* Slightly narrower */
+      left: -220px;
       width: 220px;
       height: 100%;
       background-color: #121212;
-      padding-top: 3.5em; /* Adjusted padding */
+      padding-top: 3.5em;
       box-shadow: 2px 0 12px rgba(0,0,0,0.4);
       transition: left 0.4s ease;
       z-index: 1000;
@@ -184,18 +184,18 @@
     }
     
     .sidebar a {
-      padding: 1em 1.2em; /* Adjusted padding */
+      padding: 1em 1.2em;
       text-decoration: none;
       color: var(--accent-color);
       font-family: 'UnifrakturCook', serif;
       border-bottom: 1px solid #333;
       transition: all 0.3s ease;
-      font-size: 1.1em; /* Slightly smaller */
+      font-size: 1.1em;
     }
     
     .sidebar a:hover {
       background-color: #1e1e1e;
-      padding-left: 1.5em; /* Smaller hover indent */
+      padding-left: 1.5em;
     }
     
     .sidebar.open {
@@ -224,10 +224,10 @@
       display: none;
       background-color: var(--card-bg);
       border: 1px solid var(--accent-color);
-      padding: 0.8em 1.2em; /* Reduced padding */
+      padding: 0.8em 1.2em;
       text-align: center;
       color: var(--accent-color);
-      border-radius: 20px; /* More rounded */
+      border-radius: 20px;
       animation: fadeout 3s ease-out 1 forwards;
       position: fixed;
       top: 1em;
@@ -248,10 +248,10 @@
       background: linear-gradient(45deg, #d4af37, #f6e27a);
       color: #000;
       border: none;
-      padding: 0.7em 1.5em; /* Reduced padding */
+      padding: 0.7em 1.5em;
       cursor: pointer;
       border-radius: 20px;
-      font-size: 0.95em; /* Slightly smaller */
+      font-size: 0.95em;
       font-weight: bold;
       transition: all 0.3s ease;
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
@@ -268,7 +268,7 @@
     
     @media (max-width: 768px) {
       body {
-        padding-top: 5em; /* Reduced padding */
+        padding-top: 5em;
       }
       
       h1 {
@@ -349,9 +349,11 @@
           <img src="https://img.youtube.com/vi/JLveNDNFh0w/maxresdefault.jpg" alt="Video Titel 1">
         </a>
         <div class="video-card-title">19,70 €</div>
-        <button onclick="confirmSubscription()" class="subscribe-button" style="margin-top: 1em;">
-          Abonnement abschließen
-        </button>
+        <div style="display: flex; justify-content: center; margin-top: 1em;">
+          <button onclick="confirmSubscription()" class="subscribe-button">
+            Abonnement abschließen
+          </button>
+        </div>
       </div>
     </div>
     
