@@ -349,21 +349,13 @@
           <img src="https://img.youtube.com/vi/JLveNDNFh0w/maxresdefault.jpg" alt="Video Titel 1">
         </a>
         <div class="video-card-title">19,70 €</div>
+        <button onclick="confirmSubscription()" class="subscribe-button" style="margin-top: 1em;">
+          Abonnement abschließen
+        </button>
       </div>
     </div>
     
     <div class="subscribe-area">
-        <div class="g-ytsubscribe" 
-             data-channelid="UCJS7rVmSlLLmoT5JdrFrdbQ" 
-             data-layout="default" 
-             data-count="default">
-        </div>
-      </div>
-
-      <button onclick="confirmSubscription()" class="subscribe-button">
-        Abonnement abschließen
-      </button>
-
       <div id="thankYou" class="thank-you">Los, tu' es!</div>
     </div>
   </div>
@@ -407,7 +399,5 @@
       document.getElementById('sidebar').classList.remove('open');
     }
   </script>
-
-  <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 </html>
