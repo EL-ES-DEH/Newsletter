@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portables Lebenswerk</title>
+  <title>Meine Heimküche</title>
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -134,6 +134,16 @@
       background-color: var(--card-bg);
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .subscribe-button-container {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.2em;
+      margin-top: 1.5em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
     }
     
     a {
@@ -304,6 +314,11 @@
       .subscribe-area {
         padding: 1.2em;
       }
+      
+      .subscribe-button-container {
+        padding: 1em;
+        margin-top: 1em;
+      }
     }
     
     @media (max-width: 480px) {
@@ -339,7 +354,7 @@
     <h1>Meine Heimküche</h1>
 
     <div class="intro-text">
-      Hier werden stets alle Videos aus meinem Hause übersichtlich aufgelistet.<br>Wer mich von der Bildfläche verschwunden wähnt, der wird mich hier antreffen.
+      Hier werden stets alle Videos aus meinem Hause übersichtlich aufgelistet.<br>Wer mich von der Bildfläche verschwunden wähnt, der wird mich an diesem Zufluchtsort antreffen.
     </div>
 
     <div class="video-list">
@@ -348,11 +363,12 @@
           <img src="https://img.youtube.com/vi/JLveNDNFh0w/maxresdefault.jpg" alt="Video Titel 1">
         </a>
         <div class="video-card-title">19,70 €</div>
-        <div style="display: flex; justify-content: center; margin-top: 1em;">
-          <button onclick="confirmSubscription()" class="subscribe-button">
-            Abonnement abschließen
-          </button>
-        </div>
+      </div>
+      
+      <div class="subscribe-button-container">
+        <button onclick="confirmSubscription()" class="subscribe-button">
+          Abonnement abschließen
+        </button>
       </div>
     </div>
     
